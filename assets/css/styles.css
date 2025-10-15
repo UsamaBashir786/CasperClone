@@ -1,0 +1,95 @@
+/* --------------------------Font Faces-------------------------- */
+@font-face {
+  font-family: "CalibreWeb";
+  src: url("../fonts/CalibreWeb-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Calibmedium";
+  src: url("../fonts/CalibreWeb-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Calibregular";
+  src: url("../fonts/CalibreWeb-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "NewKansas";
+  src: url("../fonts/NewKansas-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "NewKansasRegular";
+  src: url("../fonts/NewKansas-Regular.otf") format("otf");
+}
+@font-face {
+  font-family: "SuisseIntl";
+  src: url("../fonts/SuisseIntl-Book.otf") format("otf");
+}
+
+/* --------------------------Global Reset-------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* a.tap-area:before {
+  content: "";
+  inset: 0;
+  position: relative;
+  opacity: 0;
+  display: none;
+} */
+
+/* header area */
+header {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-family: var(--font-caliblight);
+  align-items: center;
+  justify-content: center;
+  height: 52.8px !important;
+}
+
+.header-wrapper {
+  max-width: var(--four-k-max-width);
+  display: flex;
+  height: 52.8px !important;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-wrapper .store-location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-wrapper .header-slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-wrapper .refer-friend {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
