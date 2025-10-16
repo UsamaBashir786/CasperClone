@@ -9,6 +9,7 @@
        Brand colors and theme variables
        ──────────────────────────────────────────────────────────────────── */
     --primary-color: #1E306E;
+    --primary-dark: #012169;
     --chat-box-color: #84B8E0;
     --black-color: #000;
     --sales-color: #CB372A;
@@ -27,7 +28,7 @@
     --font-caliblight: "CalibreWeb", sans-serif;
     --font-calibmedium: "Calibmedium", sans-serif;
     --font-calibregular: "Calibregular", sans-serif;
-    --font-newkansas: "NewKansas", sans-serif;
+    --font-newkansasmedium: "NewKansasMedium", sans-serif;
     --font-newkansasregular: "NewKansasRegular", sans-serif;
     --font-tertiary: "SuisseIntl", sans-serif;
     --font-chatbox: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Segoe UI", "Helvetica Neue", Helvetica, Cantarell, Ubuntu, Roboto, Noto, Arial, sans-serif;
@@ -50,10 +51,18 @@
        ──────────────────────────────────────────────────────────────────── */
        --test-gap: 1rem;
        --slider-gap:2rem;
+       --heading-letter-small-spacing:-0.22px;
+       --heading-letter-large-spacing:-0.54px;
+       --mostly-em--letter-spacing:-0.01em;
       /* ────────────────────────────────────────────────────────────────────────
          Box SHADOW & LAYOUT
          For Every Elements shadows 
          ──────────────────────────────────────────────────────────────────── */
       --header-below-shadow:0 0 10px #0000001b;
       --bottom-bar-shadow:0 8px 15px #00000026;
+      /* ────────────────────────────────────────────────────────────────────────
+         BORDER RADIUS & LAYOUT
+         For Every Elements BORDER RADIUS
+         ──────────────────────────────────────────────────────────────────── */
+      --rounded-full:50%;
    }

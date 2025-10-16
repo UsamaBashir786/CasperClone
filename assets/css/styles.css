@@ -16,7 +16,7 @@
   src: url("../fonts/CalibreWeb-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: "NewKansas";
+  font-family: "NewKansasMedium";
   src: url("../fonts/NewKansas-Medium.woff2") format("woff2");
 }
 @font-face {
@@ -95,11 +95,11 @@ header > .header-wrapper > .store-location {
     font-size: 18px;
     font-family: var(--font-calibregular) !important;
     font-weight: 400;
-    margin-top: -1px;
+    margin-top: -1px; /*Later Use in media query for responsiveness on small screens or big*/
 }
 
 header > .header-wrapper > .store-location:hover {
-    opacity: var(--opacity-on-hover);
+    /* opacity: var(--opacity-on-hover); */
 }
 
 header > .header-wrapper > .header-slider {
@@ -108,16 +108,16 @@ header > .header-wrapper > .header-slider {
     justify-content: space-between;
     align-items: center;
     gap: var(--slider-gap);
-    width: 31.67%;
-    margin-left: 13px;
-    margin-bottom: 1px;
+    width: 31.67%; /*Later Use in media query for responsiveness on small screens or big*/
+    margin-left: 13px; /*Later Use in media query for responsiveness on small screens or big*/
+    margin-bottom: 1px; /*Later Use in media query for responsiveness on small screens or big*/
 }
 
 .slider-text{
     font-family: var(--font-calibmedium);
     font-size: 14px;
     font-weight: 400;
-    /* letter-spacing: 0.02em; */
+    cursor: pointer;
 }
 
 header > .header-wrapper > .header-slider .left-btn,
@@ -126,11 +126,11 @@ header > .header-wrapper > .header-slider .right-btn {
 }
 
 header > .header-wrapper > .header-slider .left-btn{
-    margin-left: -5.60px;
+    margin-left: -5.60px; /*Later Use in media query for responsiveness on small screens or big*/
 }
 
 header > .header-wrapper > .header-slider .right-btn{
-    margin-right: 7.80px;
+    margin-right: 7.80px; /*Later Use in media query for responsiveness on small screens or big*/
 }
 
 header > .header-wrapper > .refer-friend {
@@ -146,11 +146,11 @@ header > .header-wrapper > .refer-friend {
     font-size: 18px;
     font-family: var(--font-calibregular) !important;
     font-weight: 400;
-    margin-top: -1px;
+    margin-top: -1px; /*Later Use in media query for responsiveness on small screens or big*/
 }
 
 header > .header-wrapper > .refer-friend:hover {
-    opacity: var(--opacity-on-hover);
+    /* opacity: var(--opacity-on-hover); */
 }
 
 /* ============================================================================
@@ -166,6 +166,8 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 9;
     box-shadow: var(--header-below-shadow);
 }
 
@@ -188,6 +190,7 @@ nav > .nav-wrapper .nav-items-wrapper {
     background-color: var(--white-color);
     display: flex;
     flex-direction: row;
+    margin-right: 14px;
 }
 
 nav > .nav-wrapper .nav-items-wrapper ul {
@@ -195,7 +198,7 @@ nav > .nav-wrapper .nav-items-wrapper ul {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 34px; /*Later Use in media query for responsiveness on small screens or big*/
+    gap: 32px; /*Later Use in media query for responsiveness on small screens or big*/
     margin-top: -0.25px; /*Later Use in media query for responsiveness on small screens or big*/
 }
 
@@ -205,18 +208,23 @@ nav > .nav-wrapper .nav-items-wrapper ul li a {
     font-size: 18px !important;
     font-weight: 500;
     letter-spacing: normal !important;
+    width: max-content;
 }
 
-.nav-items-wrapper:not(:first-child){
-    
+nav > .nav-wrapper .nav-items-wrapper ul li:nth-child(4){
+    position: relative;
 }
-
-nav > .nav-wrapper .nav-items-wrapper ul li:nth-child(1){
-    /* margin-right: 4px; */
+nav > .nav-wrapper .nav-items-wrapper ul li:nth-child(4):after{
+    content: '';
+    position: absolute;
+    background-color: var(--primary-dark);
+    height: 2.5px;
+    width: 100%;
+    left: 0;
+    bottom: -7px;
 }
-nav > .nav-wrapper .nav-items-wrapper ul li:nth-child(2){
-    /* margin-right: 4px; */
-    text-align: right;
+nav > .nav-wrapper .nav-items-wrapper ul li:hover:nth-child(4):after{
+    opacity: var(--opacity-on-hover);
 }
 
 nav > .nav-wrapper .nav-items-wrapper ul li a:hover {
@@ -231,12 +239,34 @@ nav > .nav-wrapper .nav-icons {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 3px;
+    margin-top: 3px; /*Later Use in media query for responsiveness on small screens or big*/
     gap: 20px /*Later Use in media query for responsiveness on small screens or big*/;
 }
 
 nav > .nav-wrapper .nav-icons a{
-    color: var(--primary-color);
+    color: var(--primary-dark);
+    position: relative;
+}
+nav > .nav-wrapper .nav-icons a:nth-child(4) > .bag-badge{
+    position: absolute;
+    font-size: 9px;
+    font-weight: 400;
+    font-family: var(--font-calibmedium);
+    background-color:var(--primary-dark);
+    padding: 3.50px 6px; /*Later Use in media query for responsiveness on small screens or big*/
+    line-height: 9px; /*Later Use in media query for responsiveness on small screens or big*/
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: var(--white-color);
+    border-radius: 100%;
+    top: -4.50px; /*Later Use in media query for responsiveness on small screens or big*/
+    right: -8px; /*Later Use in media query for responsiveness on small screens or big*/
+}
+nav > .nav-wrapper .nav-icons a:nth-child(4) > .bag-badge > .bag-badge-value{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav > .nav-wrapper .nav-icons a:nth-child(2){
@@ -258,6 +288,8 @@ nav > .nav-wrapper .nav-icons a:nth-child(2){
     align-items: center;
     text-align: center;
     box-shadow: var(--bottom-bar-shadow) !important;
+    z-index: 3;
+    position: relative;
 }
 
 .nav-bottom > .nav-wrapper {
@@ -266,7 +298,7 @@ nav > .nav-wrapper .nav-icons a:nth-child(2){
     justify-content: center;
     flex-direction: row;
     gap: 16px;
-    width: 93.70% !important;
+    width: 93.70% !important; /*Later Use in media query for responsiveness on small screens or big*/
 }
 
 .nav-bottom > .nav-wrapper a {
@@ -302,27 +334,49 @@ nav > .nav-wrapper .nav-icons a:nth-child(2){
    ============================================================================ */
 
 .banner-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: url(/assets/images/hero-banner-image.webp) no-repeat;
     color: white;
     text-align: center;
-    padding: 80px 24px;
+    margin-top: 0px;
+    width: 100%;
+    height: 240.8px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.banner-section > .banner-section-wrapper{
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
 }
 
 .banner-section h3:first-child {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 400;
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
+    font-family: var(--font-calibmedium);
+    letter-spacing: var(--heading-letter-small-spacing);
+    text-transform: uppercase;
 }
 
 .banner-section h2 {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 16px;
+    font-size: 56px;
+    font-weight: 400;
+    /* margin-bottom: 16px; */
+    font-family: var(--font-newkansasmedium);
+    letter-spacing: var(--heading-letter-large-spacing);
 }
 
 .banner-section h3:last-child {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 400;
+    letter-spacing: var(--mostly-em--letter-spacing);
+    font-family: var(--font-calibmedium);
 }
 
 /* ============================================================================
