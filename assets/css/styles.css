@@ -34,27 +34,28 @@
    ============================================================================ */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    width: 100%;
-    height: 100%;
-    position: relative;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 /* ============================================================================
@@ -63,95 +64,95 @@ ul {
    ============================================================================ */
 
 header {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    font-family: var(--font-caliblight);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 52.8px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-family: var(--font-caliblight);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 52.8px;
 }
 
 header > .header-wrapper {
-    display: flex;
-    height: 28.8px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: var(--wrappers-width-default) !important;
+  display: flex;
+  height: 28.8px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--wrappers-width-default) !important;
 }
 
 header > .header-wrapper > .store-location {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: var(--test-gap);
-    cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--test-gap);
+  cursor: pointer;
 }
 
-.find-store-text{
-    font-size: 18px;
-    font-family: var(--font-calibregular) !important;
-    font-weight: 400;
-    margin-top: -1px; /*Later Use in media query for responsiveness on small screens or big*/
+.find-store-text {
+  font-size: 18px;
+  font-family: var(--font-calibregular) !important;
+  font-weight: 400;
+  margin-top: -1px; /*Later Use in media query for responsiveness on small screens or big*/
 }
 
 header > .header-wrapper > .store-location:hover {
-    /* opacity: var(--opacity-on-hover); */
+  /* opacity: var(--opacity-on-hover); */
 }
 
 header > .header-wrapper > .header-slider {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--slider-gap);
-    width: 31.67%; /*Later Use in media query for responsiveness on small screens or big*/
-    margin-left: 13px; /*Later Use in media query for responsiveness on small screens or big*/
-    margin-bottom: 1px; /*Later Use in media query for responsiveness on small screens or big*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--slider-gap);
+  width: 31.67%; /*Later Use in media query for responsiveness on small screens or big*/
+  margin-left: 13px; /*Later Use in media query for responsiveness on small screens or big*/
+  margin-bottom: 1px; /*Later Use in media query for responsiveness on small screens or big*/
 }
 
-.slider-text{
-    font-family: var(--font-calibmedium);
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: -0.0010em;
-    cursor: pointer;
+.slider-text {
+  font-family: var(--font-calibmedium);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.001em;
+  cursor: pointer;
 }
 
 header > .header-wrapper > .header-slider .left-btn,
 header > .header-wrapper > .header-slider .right-btn {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-header > .header-wrapper > .header-slider .left-btn{
-    margin-left: -5.60px; /*Later Use in media query for responsiveness on small screens or big*/
+header > .header-wrapper > .header-slider .left-btn {
+  margin-left: -5.6px; /*Later Use in media query for responsiveness on small screens or big*/
 }
 
-header > .header-wrapper > .header-slider .right-btn{
-    margin-right: 7.80px; /*Later Use in media query for responsiveness on small screens or big*/
+header > .header-wrapper > .header-slider .right-btn {
+  margin-right: 7.8px; /*Later Use in media query for responsiveness on small screens or big*/
 }
 
 header > .header-wrapper > .refer-friend {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: var(--test-gap);
-    cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--test-gap);
+  cursor: pointer;
 }
 
-.refer-friend-text{
-    font-size: 18px;
-    font-family: var(--font-calibregular) !important;
-    font-weight: 400;
-    margin-top: -1px; /*Later Use in media query for responsiveness on small screens or big*/
+.refer-friend-text {
+  font-size: 18px;
+  font-family: var(--font-calibregular) !important;
+  font-weight: 400;
+  margin-top: -1px; /*Later Use in media query for responsiveness on small screens or big*/
 }
 
 header > .header-wrapper > .refer-friend:hover {
-    /* opacity: var(--opacity-on-hover); */
+  /* opacity: var(--opacity-on-hover); */
 }
 
 /* ============================================================================
@@ -160,119 +161,119 @@ header > .header-wrapper > .refer-friend:hover {
    ============================================================================ */
 
 nav {
-    background-color: var(--white-color);
-    width: 100%;
-    height: 104px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 9;
-    box-shadow: var(--header-below-shadow);
+  background-color: var(--white-color);
+  width: 100%;
+  height: 104px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 9;
+  box-shadow: var(--header-below-shadow);
 }
 
 nav > .nav-wrapper {
-    height: 56px;
-    background-color: var(--white-color);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: var(--wrappers-width-default) !important;
+  height: 56px;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--wrappers-width-default) !important;
 }
 
 nav > .nav-wrapper .casper-logo img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 nav > .nav-wrapper .nav-items-wrapper {
-    background-color: var(--white-color);
-    display: flex;
-    flex-direction: row;
-    margin-right: 14px;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: row;
+  margin-right: 14px;
 }
 
 nav > .nav-wrapper .nav-items-wrapper ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 32px; /*Later Use in media query for responsiveness on small screens or big*/
-    margin-top: -0.25px; /*Later Use in media query for responsiveness on small screens or big*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 32px; /*Later Use in media query for responsiveness on small screens or big*/
+  margin-top: -0.25px; /*Later Use in media query for responsiveness on small screens or big*/
 }
 
 nav > .nav-wrapper .nav-items-wrapper ul li a {
-    color: var(--primary-color);
-    font-family: var(--font-calibmedium);
-    font-size: 18px !important;
-    font-weight: 500;
-    letter-spacing: normal !important;
-    width: max-content;
+  color: var(--primary-color);
+  font-family: var(--font-calibmedium);
+  font-size: 18px !important;
+  font-weight: 500;
+  letter-spacing: normal !important;
+  width: max-content;
 }
 
-nav > .nav-wrapper .nav-items-wrapper ul li:nth-child(4){
-    position: relative;
+nav > .nav-wrapper .nav-items-wrapper ul li:nth-child(4) {
+  position: relative;
 }
-nav > .nav-wrapper .nav-items-wrapper ul li:nth-child(4):after{
-    content: '';
-    position: absolute;
-    background-color: var(--primary-dark);
-    height: 2.5px;
-    width: 100%;
-    left: 0;
-    bottom: -7px;
+nav > .nav-wrapper .nav-items-wrapper ul li:nth-child(4):after {
+  content: "";
+  position: absolute;
+  background-color: var(--primary-dark);
+  height: 2.5px;
+  width: 100%;
+  left: 0;
+  bottom: -7px;
 }
-nav > .nav-wrapper .nav-items-wrapper ul li:hover:nth-child(4):after{
-    opacity: var(--opacity-on-hover);
+nav > .nav-wrapper .nav-items-wrapper ul li:hover:nth-child(4):after {
+  opacity: var(--opacity-on-hover);
 }
 
 nav > .nav-wrapper .nav-items-wrapper ul li a:hover {
-    opacity: var(--opacity-on-hover);
+  opacity: var(--opacity-on-hover);
 }
 
 nav > .nav-wrapper .nav-items-wrapper ul li a.sales-text {
-    color: var(--sales-color);
+  color: var(--sales-color);
 }
 
 nav > .nav-wrapper .nav-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 3px; /*Later Use in media query for responsiveness on small screens or big*/
-    gap: 20px /*Later Use in media query for responsiveness on small screens or big*/;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px; /*Later Use in media query for responsiveness on small screens or big*/
+  gap: 20px
+    /*Later Use in media query for responsiveness on small screens or big*/;
 }
 
-nav > .nav-wrapper .nav-icons a{
-    color: var(--primary-dark);
-    position: relative;
+nav > .nav-wrapper .nav-icons a {
+  color: var(--primary-dark);
+  position: relative;
 }
-nav > .nav-wrapper .nav-icons a:nth-child(4) > .bag-badge{
-    position: absolute;
-    font-size: 9px;
-    font-weight: 400;
-    font-family: var(--font-calibmedium);
-    background-color:var(--primary-dark);
-    padding: 3.50px 6px; /*Later Use in media query for responsiveness on small screens or big*/
-    line-height: 9px; /*Later Use in media query for responsiveness on small screens or big*/
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    color: var(--white-color);
-    border-radius: 100%;
-    top: -4.50px; /*Later Use in media query for responsiveness on small screens or big*/
-    right: -8px; /*Later Use in media query for responsiveness on small screens or big*/
+nav > .nav-wrapper .nav-icons a:nth-child(4) > .bag-badge {
+  position: absolute;
+  font-size: 9px;
+  font-weight: 400;
+  font-family: var(--font-calibmedium);
+  background-color: var(--primary-dark);
+  padding: 3.5px 6px; /*Later Use in media query for responsiveness on small screens or big*/
+  line-height: 9px; /*Later Use in media query for responsiveness on small screens or big*/
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: var(--white-color);
+  border-radius: 100%;
+  top: -4.5px; /*Later Use in media query for responsiveness on small screens or big*/
+  right: -8px; /*Later Use in media query for responsiveness on small screens or big*/
 }
-nav > .nav-wrapper .nav-icons a:nth-child(4) > .bag-badge > .bag-badge-value{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+nav > .nav-wrapper .nav-icons a:nth-child(4) > .bag-badge > .bag-badge-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-nav > .nav-wrapper .nav-icons a:nth-child(2){
-    margin-bottom: 3px; /*Later Use in media query for responsiveness on small screens or big*/ 
-
+nav > .nav-wrapper .nav-icons a:nth-child(2) {
+  margin-bottom: 3px; /*Later Use in media query for responsiveness on small screens or big*/
 }
 
 /* ============================================================================
@@ -281,51 +282,53 @@ nav > .nav-wrapper .nav-icons a:nth-child(2){
    ============================================================================ */
 
 .nav-bottom {
-    width: 100%;
-    height: 68.4px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: var(--bottom-bar-shadow) !important;
-    z-index: 3;
-    position: relative;
+  width: 100%;
+  height: 68.4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--bottom-bar-shadow) !important;
+  z-index: 3;
+  position: relative;
 }
 
 .nav-bottom > .nav-wrapper {
-    height: 52.4px;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    gap: 16px;
-    width: var(--wrappers-width-default); /*Later Use in media query for responsiveness on small screens or big*/
+  height: 52.4px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+  width: var(
+    --wrappers-width-default
+  ); /*Later Use in media query for responsiveness on small screens or big*/
 }
 
 .nav-bottom > .nav-wrapper a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4px; /*Later Use in media query for responsiveness on small screens or big*/
-    color: var(--primary-color);
-    font-family: var(--font-calibmedium);
-    font-size: 12px;
-    padding: 0 8px 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px; /*Later Use in media query for responsiveness on small screens or big*/
+  color: var(--primary-color);
+  font-family: var(--font-calibmedium);
+  font-size: 12px;
+  padding: 0 8px 2px;
 }
 
 .nav-bottom > .nav-wrapper a .navbottom-img-wrapper {
-    width: 32px !important;
-    height: 32px !important;
+  width: 32px !important;
+  height: 32px !important;
 }
 
 .nav-bottom > .nav-wrapper a .navbottom-img-wrapper img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .nav-bottom > .nav-wrapper a .navbottom-text-wrapper {
-    display: flex;
+  display: flex;
 }
 
 /* ============================================================================
@@ -334,52 +337,52 @@ nav > .nav-wrapper .nav-icons a:nth-child(2){
    ============================================================================ */
 
 .banner-section {
-    background: url(/assets/images/hero-banner-image.webp) no-repeat;
-    background-position: center;
-    background-size: cover;
-    color: white;
-    text-align: center;
-    margin-top: 0px;
-    width: 100%;
-    height: 240.8px;/*Later Use in media query for responsiveness on small screens or big*/
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  background: url(/assets/images/hero-banner-image.webp) no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  margin-top: 0px;
+  width: 100%;
+  height: 240.8px; /*Later Use in media query for responsiveness on small screens or big*/
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.banner-section > .banner-section-wrapper{
-    color: var(--primary-color);
-    display: flex;
-    flex-direction: column;
-    gap: 14px; /*Later Use in media query for responsiveness on small screens or big*/
-    margin-bottom: 16px; /*Later Use in media query for responsiveness on small screens or big*/
+.banner-section > .banner-section-wrapper {
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /*Later Use in media query for responsiveness on small screens or big*/
+  margin-bottom: 16px; /*Later Use in media query for responsiveness on small screens or big*/
 }
 
 .banner-section h3:first-child {
-    font-size: 22px;
-    font-weight: 400;
-    /* margin-bottom: 12px; */
-    font-family: var(--font-calibmedium);
-    letter-spacing: var(--heading-letter-small-spacing);
-    text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 400;
+  /* margin-bottom: 12px; */
+  font-family: var(--font-calibmedium);
+  letter-spacing: var(--heading-letter-small-spacing);
+  text-transform: uppercase;
 }
 
 .banner-section h2 {
-    font-size: 56px;
-    font-weight: 400;
-    /* margin-bottom: 16px; */
-    font-family: var(--font-newkansasmedium);
-    letter-spacing: var(--heading-letter-large-spacing);
+  font-size: 56px;
+  font-weight: 400;
+  /* margin-bottom: 16px; */
+  font-family: var(--font-newkansasmedium);
+  letter-spacing: var(--heading-letter-large-spacing);
 }
 
 .banner-section h3:last-child {
-    font-size: 28px;
-    font-weight: 400;
-    letter-spacing: var(--mostly-em--letter-spacing);
-    font-family: var(--font-calibmedium);
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: var(--mostly-em--letter-spacing);
+  font-family: var(--font-calibmedium);
 }
 
 /* ============================================================================
@@ -388,52 +391,52 @@ nav > .nav-wrapper .nav-icons a:nth-child(2){
    ============================================================================ */
 
 .products-section {
-    padding: 80px 0;
+  padding: 80px 0;
 }
 
 .product-section-header {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .product-section-header h2 {
-    font-size: 36px;
-    color: var(--primary-color);
-    font-weight: 600;
+  font-size: 36px;
+  color: var(--primary-color);
+  font-weight: 600;
 }
 
 .products-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
 }
 
 .products-img-wrapper {
-    position: relative;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    overflow: hidden;
-    aspect-ratio: 4/3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .products-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .products-img-badge {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    background-color: var(--sales-color);
-    color: white;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 600;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: var(--sales-color);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 /* ============================================================================
@@ -442,94 +445,140 @@ nav > .nav-wrapper .nav-icons a:nth-child(2){
    ============================================================================ */
 
 main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 61px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 61px;
 }
-.main-wrapper{
-    width: var(--wrappers-width-default);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-}
-
-.product-section-one{
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
+.main-wrapper {
+  width: var(--wrappers-width-default);
+  display: flex;
+  flex-direction: column;
+  gap: 61.50px;
+  justify-content: center;
 }
 
-.product-section-heading h3{
-    display: flex;
-    flex-direction: column;
-    font-size: 44px;
-    color: var(--primary-color);
-    font-family: var(--font-newkansasmedium);
-    font-weight: 400;
-    letter-spacing: var(--mostly-em--letter-spacing);
+.product-section {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
 }
 
-.product-cards-wrapper{
+.product-section-heading h3 {
+  display: flex;
+  flex-direction: column;
+  font-size: 44px;
+  color: var(--primary-color);
+  font-family: var(--font-newkansasmedium);
+  font-weight: 400;
+  letter-spacing: var(--mostly-em--letter-spacing);
+}
+
+.product-cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--product-cards-gap);
+}
+
+.product-cards-wrapper > .product-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 10px;
+}
+.product-cards-wrapper > .product-card > .product-image-wrapper {
+  width: 100%;
+  height: 254px !important;
+  position: relative;
+}
+.product-cards-wrapper > .product-card > .product-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 5.6px;
+  border-top-right-radius: 5.6px;
+}
+.product-cards-wrapper
+  > .product-card
+  > .product-image-wrapper
+  .product-image-badge {
+  background-color: var(--badge-color);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  border-radius: var(--rounded-badge);
+  position: absolute;
+  left: 16px;
+  top: 16.3px;
+  z-index: 99;
+}
+.product-cards-wrapper
+  > .product-card
+  > .product-image-wrapper
+  .product-image-badge
+  span {
+  font-family: var(--font-calibmedium);
+  font-weight: 400;
+  font-size: 14px;
+  padding: 5px 8px;
+  letter-spacing: 0.01px;
+  text-transform: uppercase;
+}
+
+.product-card > .product-card-headings a {
+  font-size: 18px;
+  font-family: var(--font-calibmedium);
+  /* font-weight: 600; */
+  color: var(--black-color);
+}
+
+.product-card-addition-details-wrapper{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: var(--product-cards-gap);
+    gap: 8px;
+    margin-top: -2px; /*Later Use in media query for responsiveness on small screens or big*/
+    cursor: initial;
 }
 
-.product-cards-wrapper > .product-card{
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
+.product-card-addition-details-wrapper > span.from-text {
+  font-size: var(--from-font-size);
+  font-weight: 500;
+  font-family: var(--font-calibregular);
+  color: var(--product-from-color);
 }
-.product-cards-wrapper > .product-card > .product-image-wrapper{
-    width: 100%;
-    height: 253.5px !important;
-    position: relative;
+
+.product-card-addition-details-wrapper > span.product-price {
+  font-size: var(--product-price-font-size);
+  font-weight: 500;
+  font-family: var(--font-calibregular);
+  color: var(--badge-color);
 }
-.product-cards-wrapper > .product-card > .product-image-wrapper img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-top-left-radius: 5.6px;
-    border-top-right-radius: 5.6px;
+.product-card-addition-details-wrapper > span.cut-price {
+    font-size: var(--cutprice-font-size);
+    font-weight: 500;
+    color: var(--product-cutprice-color);
+    text-decoration: line-through;
+    font-family: var(--font-calibregular);
 }
-.product-cards-wrapper > .product-card > .product-image-wrapper .product-image-badge{
+.product-card-addition-details-wrapper > span.product-off-badge{
+    font-size: var(--product-off-badge-font-size);
+    font-weight: 400;
+    font-family: var(--font-calibmedium);
+    text-transform: uppercase;
     background-color: var(--badge-color);
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     color: var(--white-color);
     border-radius: var(--rounded-badge);
-    position: absolute;
-    left: 16px;
-    top: 16.30px;
-    z-index: 99;
+    padding: 5.1px 8.15px; /*Later Use in media query for responsiveness on small screens or big*/
+    margin-top: -1px; /*Later Use in media query for responsiveness on small screens or big*/
+    cursor: initial;
 }
-.product-cards-wrapper > .product-card > .product-image-wrapper .product-image-badge span{
-    font-family: var(--font-calibmedium);
-    font-weight: 400;
-    font-size: 14px;
-    padding: 5px 8px;
-    letter-spacing: 0.010px;
-    text-transform: uppercase;
-}
-
-.product-card > .product-card-headings a{
-    font-size: 18px;
-    font-family: var(--font-calibmedium);
-    /* font-weight: 600; */
-    color: var(--black-color);
+.product-card-addition-details-wrapper > span.product-off-badge > span{
 }
 
 
-.product-card-addition-details-wrapper > .from-text{
-    font-size: ;
-    font-family: ;
-    color: var(--product-from-color);
-}

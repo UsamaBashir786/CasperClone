@@ -15,6 +15,7 @@
     --badge-color:#00706E;
     --chat-box-color: #84B8E0;
     --product-from-color: #5B5B5B;
+    --product-cutprice-color: #68749C;
     --sales-color: #CB372A;
 
     /* ────────────────────────────────────────────────────────────────────────
@@ -78,4 +79,5 @@
          --from-font-size:18px;
          --product-price-font-size:18px;
          --cutprice-font-size:18px;
+         --product-off-badge-font-size:14px;
    }
