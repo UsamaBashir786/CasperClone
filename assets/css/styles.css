@@ -79,7 +79,7 @@ header > .header-wrapper {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 93.70% !important;
+    width: var(--wrappers-width-default) !important;
 }
 
 header > .header-wrapper > .store-location {
@@ -117,6 +117,7 @@ header > .header-wrapper > .header-slider {
     font-family: var(--font-calibmedium);
     font-size: 14px;
     font-weight: 400;
+    letter-spacing: -0.0010em;
     cursor: pointer;
 }
 
@@ -178,7 +179,7 @@ nav > .nav-wrapper {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 93.70% !important;
+    width: var(--wrappers-width-default) !important;
 }
 
 nav > .nav-wrapper .casper-logo img {
@@ -298,7 +299,7 @@ nav > .nav-wrapper .nav-icons a:nth-child(2){
     justify-content: center;
     flex-direction: row;
     gap: 16px;
-    width: 93.70% !important; /*Later Use in media query for responsiveness on small screens or big*/
+    width: var(--wrappers-width-default); /*Later Use in media query for responsiveness on small screens or big*/
 }
 
 .nav-bottom > .nav-wrapper a {
@@ -325,7 +326,6 @@ nav > .nav-wrapper .nav-icons a:nth-child(2){
 
 .nav-bottom > .nav-wrapper a .navbottom-text-wrapper {
     display: flex;
-    /* margin-left: 2px; */
 }
 
 /* ============================================================================
@@ -335,11 +335,13 @@ nav > .nav-wrapper .nav-icons a:nth-child(2){
 
 .banner-section {
     background: url(/assets/images/hero-banner-image.webp) no-repeat;
+    background-position: center;
+    background-size: cover;
     color: white;
     text-align: center;
     margin-top: 0px;
     width: 100%;
-    height: 240.8px;
+    height: 240.8px;/*Later Use in media query for responsiveness on small screens or big*/
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -352,7 +354,8 @@ nav > .nav-wrapper .nav-icons a:nth-child(2){
     color: var(--primary-color);
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 14px; /*Later Use in media query for responsiveness on small screens or big*/
+    margin-bottom: 16px; /*Later Use in media query for responsiveness on small screens or big*/
 }
 
 .banner-section h3:first-child {
@@ -440,4 +443,93 @@ nav > .nav-wrapper .nav-icons a:nth-child(2){
 
 main {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 61px;
+}
+.main-wrapper{
+    width: var(--wrappers-width-default);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-section-one{
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.product-section-heading h3{
+    display: flex;
+    flex-direction: column;
+    font-size: 44px;
+    color: var(--primary-color);
+    font-family: var(--font-newkansasmedium);
+    font-weight: 400;
+    letter-spacing: var(--mostly-em--letter-spacing);
+}
+
+.product-cards-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--product-cards-gap);
+}
+
+.product-cards-wrapper > .product-card{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.product-cards-wrapper > .product-card > .product-image-wrapper{
+    width: 100%;
+    height: 253.5px !important;
+    position: relative;
+}
+.product-cards-wrapper > .product-card > .product-image-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 5.6px;
+    border-top-right-radius: 5.6px;
+}
+.product-cards-wrapper > .product-card > .product-image-wrapper .product-image-badge{
+    background-color: var(--badge-color);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    border-radius: var(--rounded-badge);
+    position: absolute;
+    left: 16px;
+    top: 16.30px;
+    z-index: 99;
+}
+.product-cards-wrapper > .product-card > .product-image-wrapper .product-image-badge span{
+    font-family: var(--font-calibmedium);
+    font-weight: 400;
+    font-size: 14px;
+    padding: 5px 8px;
+    letter-spacing: 0.010px;
+    text-transform: uppercase;
+}
+
+.product-card > .product-card-headings a{
+    font-size: 18px;
+    font-family: var(--font-calibmedium);
+    /* font-weight: 600; */
+    color: var(--black-color);
+}
+
+
+.product-card-addition-details-wrapper > .from-text{
+    font-size: ;
+    font-family: ;
+    color: var(--product-from-color);
 }

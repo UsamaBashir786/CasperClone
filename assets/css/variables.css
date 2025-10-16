@@ -10,10 +10,12 @@
        ──────────────────────────────────────────────────────────────────── */
     --primary-color: #1E306E;
     --primary-dark: #012169;
-    --chat-box-color: #84B8E0;
-    --black-color: #000;
-    --sales-color: #CB372A;
     --white-color: #FFFFFF;
+    --black-color: #151515;
+    --badge-color:#00706E;
+    --chat-box-color: #84B8E0;
+    --product-from-color: #5B5B5B;
+    --sales-color: #CB372A;
 
     /* ────────────────────────────────────────────────────────────────────────
        INTERACTION STATES
@@ -45,6 +47,8 @@
     --max-laptop-large-width: 1344px;
     --four-k-max-width: 1600px;
 
+    --wrappers-width-default:93.70%;
+
     /* ────────────────────────────────────────────────────────────────────────
        SPACING & LAYOUT
        Gap and spacing utilities
@@ -54,6 +58,7 @@
        --heading-letter-small-spacing:-0.22px;
        --heading-letter-large-spacing:-0.54px;
        --mostly-em--letter-spacing:-0.01em;
+       --product-cards-gap:23.5px;
       /* ────────────────────────────────────────────────────────────────────────
          Box SHADOW & LAYOUT
          For Every Elements shadows 
@@ -64,5 +69,13 @@
          BORDER RADIUS & LAYOUT
          For Every Elements BORDER RADIUS
          ──────────────────────────────────────────────────────────────────── */
-      --rounded-full:50%;
+         --rounded-full:50%;
+         --rounded-badge:20px;
+         /* ────────────────────────────────────────────────────────────────────────
+            PRODUCT & LAYOUT
+            For Every Products FONT SIZES
+            ──────────────────────────────────────────────────────────────────── */
+         --from-font-size:18px;
+         --product-price-font-size:18px;
+         --cutprice-font-size:18px;
    }
