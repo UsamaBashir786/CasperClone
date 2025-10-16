@@ -1,78 +1,502 @@
-@media (max-width: 320px) {
-  header {
-    height: 42.1px;
-  }
-  .header-wrapper {
-    height: 22.1px;
-  }  
-  main {
-    max-width: var(--mobile-small-width);
-  }
-}
-@media screen and(min-width:321px) and  (max-width: 375px) {
-  header {
-    height: 42.1px;
-  }
-  .header-wrapper {
-    height: 22.1px;
-  }
-  main {
-    max-width: var(--max-mobile-width);
-  }
-}
-@media screen and(min-width:356px) and  (max-width: 425px) {
-  header {
-    height: 42.1px;
-  }
-  .header-wrapper {
-    height: 22.1px;
-  }
-  main {
-    max-width: var(--max-mobile-large-width);
-  }
+/* ============================================================================
+   RESPONSIVE MEDIA QUERIES
+   Breakpoint-specific styles for various device sizes
+   ============================================================================ */
+
+/* ────────────────────────────────────────────────────────────────────────────
+   DEFAULT STYLES (Mobile First Approach)
+   Base styles that apply to all screen sizes unless overridden
+   ──────────────────────────────────────────────────────────────────────────── */
+
+/* Hide these elements on screens smaller than 1025px */
+.store-location,
+.refer-friend,
+.icon-search-right,
+.nav-items-wrapper {
+    display: none !important;
 }
 
-@media screen and(min-width:426px) and  (max-width: 768px) {
-  header {
-    height: 47.8px;
-  }
-  .header-wrapper {
-    height: 23.8px;
-  }
-  main {
-    max-width: var(--max-tablet-width);
-  }
+/* Show these elements on screens smaller than 1025px, hide on larger screens */
+.map-icon,
+.search-icon-left,
+.mobile-menu-icon {
+    display: flex !important;
 }
-@media screen and(min-width:769px) and  (max-width: 1024px) {
-  header {
-    height: 47.8;
-  }
-  .header-wrapper {
-    height: 23.8px;
-  }
-  main {
-    max-width: var(--max-laptop-width);
-  }
+
+/* Show these elements on screens 1025px and larger */
+@media (min-width: 1025px) {
+    .store-location,
+    .refer-friend,
+    .icon-search-right,
+    .nav-items-wrapper {
+        display: flex !important;
+    }
+    
+    /* Hide these on larger screens */
+    .map-icon,
+    .search-icon-left,
+    .mobile-menu-icon {
+        display: none !important;
+    }
 }
-@media screen and(min-width:1025px) and (max-width: 1440px) {
-  header {
-    height: 52.8px;
-  }
-  .header-wrapper {
-    height: 28.8px;
-  }
-  main {
-    max-width: var(--max-laptop-large-width);
-  }
+
+/* ────────────────────────────────────────────────────────────────────────────
+   MOBILE SMALL (max-width: 320px)
+   Extra small mobile devices
+   ──────────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 320px) {
+    header {
+        height: auto !important;
+        min-height: 42.1px !important;
+    }
+    
+    .header-wrapper {
+        height: auto !important;
+        min-height: 22.1px !important;
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 0 auto !important;
+    }
+    
+    nav {
+        height: auto !important;
+        min-height: 70.66px !important;
+    }
+    
+    .nav-wrapper {
+        height: auto !important;
+        min-height: 46.66px !important;
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 0 auto !important;
+    }
+    
+    .casper-logo img {
+        max-width: 80px !important;
+        height: auto !important;
+    }
+    
+    .nav-bottom {
+        height: auto !important;
+        min-height: 82.8px !important;
+    }
+    
+    .nav-bottom > .nav-wrapper {
+        height: auto !important;
+        min-height: 52.4px !important;
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 0 auto !important;
+        flex-wrap: wrap !important;
+    }
+    
+    main {
+        width: 100% !important;
+    }
+    
+    .main-wrapper {
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 0 auto !important;
+    }
+    
+    .banner-section {
+    }
+    
+    .banner-section h2 {
+        font-size: 28px !important;
+    }
 }
-@media screen and(min-width:1441px) and (max-width: 2560px) {
-  header {
-    height: 52.8px;
-  }
-  .header-wrapper {
-    height: 28.8px;
-  }
-  main {
-    max-width: var(--four-k-max-width);
-  }
+
+/* ────────────────────────────────────────────────────────────────────────────
+   MOBILE MEDIUM (321px - 375px)
+   Standard mobile devices
+   ──────────────────────────────────────────────────────────────────────────── */
+
+@media (min-width: 321px) and (max-width: 375px) {
+    header {
+        height: auto !important;
+        min-height: 42.1px !important;
+    }
+    
+    .header-wrapper {
+        height: auto !important;
+        min-height: 22.1px !important;
+        width: 100% !important;
+        max-width: 335px !important;
+        margin: 0 auto !important;
+    }
+    
+    nav {
+        height: auto !important;
+        min-height: 70.66px !important;
+    }
+    
+    .nav-wrapper {
+        height: auto !important;
+        min-height: 46.66px !important;
+        width: 100% !important;
+        max-width: 335px !important;
+        margin: 0 auto !important;
+    }
+    
+    .casper-logo img {
+        max-width: 90px !important;
+        height: auto !important;
+    }
+    
+    .nav-bottom {
+        height: auto !important;
+        min-height: 68.4px !important;
+    }
+    
+    .nav-bottom > .nav-wrapper {
+        height: auto !important;
+        min-height: 52.4px !important;
+        width: 100% !important;
+        max-width: 335px !important;
+        margin: 0 auto !important;
+        flex-wrap: wrap !important;
+    }
+    
+    main {
+        width: 100% !important;
+    }
+    
+    .main-wrapper {
+        width: 100% !important;
+        max-width: 335px !important;
+        margin: 0 auto !important;
+    }
+    
+    .banner-section {
+    }
+    
+    .banner-section h2 {
+        font-size: 32px !important;
+    }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   MOBILE LARGE (376px - 425px)
+   Large mobile devices and phablets
+   ──────────────────────────────────────────────────────────────────────────── */
+
+@media (min-width: 376px) and (max-width: 425px) {
+    header {
+        height: auto !important;
+        min-height: 42.1px !important;
+    }
+    
+    .header-wrapper {
+        height: auto !important;
+        min-height: 22.1px !important;
+        width: 100% !important;
+        max-width: 385px !important;
+        margin: 0 auto !important;
+    }
+    
+    nav {
+        height: auto !important;
+        min-height: 70.66px !important;
+    }
+    
+    .nav-wrapper {
+        height: auto !important;
+        min-height: 46.66px !important;
+        width: 100% !important;
+        max-width: 385px !important;
+        margin: 0 auto !important;
+    }
+    
+    .casper-logo img {
+        max-width: 100px !important;
+        height: auto !important;
+    }
+    
+    .nav-bottom {
+        height: auto !important;
+        min-height: 68.4px !important;
+    }
+    
+    .nav-bottom > .nav-wrapper {
+        height: auto !important;
+        min-height: 52.4px !important;
+        width: 100% !important;
+        max-width: 385px !important;
+        margin: 0 auto !important;
+    }
+    
+    main {
+        width: 100% !important;
+    }
+    
+    .main-wrapper {
+        width: 100% !important;
+        max-width: 385px !important;
+        margin: 0 auto !important;
+    }
+    
+    .banner-section {
+    }
+    
+    .banner-section h2 {
+        font-size: 36px !important;
+    }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   TABLET (426px - 768px)
+   Small tablets and large mobile landscape
+   ──────────────────────────────────────────────────────────────────────────── */
+
+@media (min-width: 426px) and (max-width: 768px) {
+    header {
+        height: auto !important;
+        min-height: 47.8px !important;
+    }
+    
+    .header-wrapper {
+        height: auto !important;
+        min-height: 23.8px !important;
+        width: 100% !important;
+        max-width: 704px !important;
+        margin: 0 auto !important;
+    }
+    
+    nav {
+        height: auto !important;
+        min-height: 104px !important;
+    }
+    
+    .nav-wrapper {
+        height: auto !important;
+        min-height: 56px !important;
+        width: 100% !important;
+        max-width: 704px !important;
+        margin: 0 auto !important;
+    }
+    
+    .casper-logo img {
+        max-width: 120px !important;
+        height: auto !important;
+    }
+    
+    .nav-bottom {
+        height: auto !important;
+        min-height: 68.4px !important;
+    }
+    
+    .nav-bottom > .nav-wrapper {
+        height: auto !important;
+        min-height: 52.4px !important;
+        width: 100% !important;
+        max-width: 704px !important;
+        margin: 0 auto !important;
+    }
+    
+    main {
+        width: 100% !important;
+    }
+    
+    .main-wrapper {
+        width: 100% !important;
+        max-width: 704px !important;
+        margin: 0 auto !important;
+    }
+    
+    .banner-section {
+    }
+    
+    .banner-section h2 {
+        font-size: 42px !important;
+    }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   LAPTOP (769px - 1024px)
+   Standard laptops and large tablets
+   ──────────────────────────────────────────────────────────────────────────── */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        height: auto !important;
+        min-height: 47.8px !important;
+    }
+    
+    .header-wrapper {
+        height: auto !important;
+        min-height: 23.8px !important;
+        width: 100% !important;
+        max-width: 928px !important;
+        margin: 0 auto !important;
+    }
+    
+    nav {
+        height: auto !important;
+        min-height: 104px !important;
+    }
+    
+    .nav-wrapper {
+        height: auto !important;
+        min-height: 56px !important;
+        width: 100% !important;
+        max-width: 928px !important;
+        margin: 0 auto !important;
+    }
+    
+    .casper-logo img {
+        max-width: 140px !important;
+        height: auto !important;
+    }
+    
+    .nav-bottom {
+        height: auto !important;
+        min-height: 68.4px !important;
+    }
+    
+    .nav-bottom > .nav-wrapper {
+        height: auto !important;
+        min-height: 52.4px !important;
+        width: 100% !important;
+        max-width: 928px !important;
+        margin: 0 auto !important;
+    }
+    
+    main {
+        width: 100% !important;
+    }
+    
+    .main-wrapper {
+        width: 100% !important;
+        max-width: 928px !important;
+        margin: 0 auto !important;
+    }
+    
+    .banner-section {
+    }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   HEADER SLIDER (max-width: 1024px)
+   Specific style for header slider
+   ──────────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+    header > .header-wrapper > .header-slider {
+        width: 100% !important;
+    }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   LAPTOP LARGE (1025px - 1440px)
+   Large laptops and small desktops
+   ──────────────────────────────────────────────────────────────────────────── */
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    header {
+        height: 52.8px !important;
+        width: 100%;
+    }
+    
+    .header-wrapper {
+        height: 28.8px !important;
+        width: 100% !important;
+        max-width: 1344px !important;
+        margin: 0 auto !important;
+    }
+    
+    nav {
+        height: 104px !important;
+    }
+    
+    .nav-wrapper {
+        height: 56px !important;
+        width: 100% !important;
+        max-width: 1344px !important;
+        margin: 0 auto !important;
+    }
+    
+    .casper-logo img {
+        max-width: 120px !important;
+        height: auto !important;
+    }
+    
+    .nav-bottom {
+        height: 68.4px !important;
+    }
+    
+    .nav-bottom > .nav-wrapper {
+        height: 52.4px !important;
+        width: 100% !important;
+        max-width: 1344px !important;
+        margin: 0 auto !important;
+    }
+    
+    main {
+        width: 100% !important;
+    }
+    
+    .main-wrapper {
+        width: 100% !important;
+        max-width: 1344px !important;
+        margin: 0 auto !important;
+    }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   DESKTOP & 4K (1441px and above)
+   Large desktops and 4K displays
+   ──────────────────────────────────────────────────────────────────────────── */
+
+@media (min-width: 1441px) {
+    header {
+        height: 52.8px !important;
+    }
+    
+    .header-wrapper {
+        height: 28.8px !important;
+        width: 100% !important;
+        max-width: 1600px !important;
+        margin: 0 auto !important;
+    }
+    
+    nav {
+        height: 104px !important;
+        align-items: center;
+    }
+    
+    .nav-wrapper {
+        height: 56px !important;
+        width: 100% !important;
+        max-width: 1600px !important;
+        margin: 0 auto !important;
+    }
+    
+    .casper-logo img {
+        max-width: 120px !important;
+        height: auto !important;
+    }
+    
+    .nav-bottom {
+        height: 68.4px !important;
+    }
+    
+    .nav-bottom > .nav-wrapper {
+        height: 52.4px !important;
+        width: 100% !important;
+        max-width: 1600px !important;
+        margin: 0 auto !important;
+    }
+    
+    main {
+        width: 100% !important;
+    }
+    
+    .main-wrapper {
+        width: 100% !important;
+        max-width: 1600px !important;
+        margin: 0 auto !important;
+    }
 }

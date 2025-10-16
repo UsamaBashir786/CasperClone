@@ -1,4 +1,8 @@
-/* --------------------------Font Faces-------------------------- */
+/* ============================================================================
+   FONT FACES
+   Custom font definitions for the Casper website
+   ============================================================================ */
+
 @font-face {
   font-family: "CalibreWeb";
   src: url("../fonts/CalibreWeb-Light.woff2") format("woff2");
@@ -24,72 +28,362 @@
   src: url("../fonts/SuisseIntl-Book.otf") format("otf");
 }
 
-/* --------------------------Global Reset-------------------------- */
+/* ============================================================================
+   GLOBAL RESET & BASE STYLES
+   Reset default browser styles and set global properties
+   ============================================================================ */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-  position: relative;
+html, body {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
-/* a.tap-area:before {
-  content: "";
-  inset: 0;
-  position: relative;
-  opacity: 0;
-  display: none;
-} */
+ul {
+    list-style: none;
+}
 
-/* header area */
+/* ============================================================================
+   HEADER SECTION
+   Top banner with store location, slider, and refer friend features
+   ============================================================================ */
+
 header {
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  font-family: var(--font-caliblight);
-  align-items: center;
-  justify-content: center;
-  height: 52.8px !important;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-family: var(--font-caliblight);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 52.8px;
 }
 
-.header-wrapper {
-  max-width: var(--four-k-max-width);
-  display: flex;
-  height: 52.8px !important;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+header > .header-wrapper {
+    display: flex;
+    height: 28.8px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 93.70% !important;
 }
 
-.header-wrapper .store-location {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+header > .header-wrapper > .store-location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--test-gap);
+    cursor: pointer;
 }
 
-.header-wrapper .header-slider {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.find-store-text{
+    font-size: 18px;
+    font-family: var(--font-calibregular) !important;
+    font-weight: 400;
+    margin-top: -1px;
 }
 
-.header-wrapper .refer-friend {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+header > .header-wrapper > .store-location:hover {
+    opacity: var(--opacity-on-hover);
+}
+
+header > .header-wrapper > .header-slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--slider-gap);
+    width: 31.67%;
+    margin-left: 13px;
+    margin-bottom: 1px;
+}
+
+.slider-text{
+    font-family: var(--font-calibmedium);
+    font-size: 14px;
+    font-weight: 400;
+    /* letter-spacing: 0.02em; */
+}
+
+header > .header-wrapper > .header-slider .left-btn,
+header > .header-wrapper > .header-slider .right-btn {
+    cursor: pointer;
+}
+
+header > .header-wrapper > .header-slider .left-btn{
+    margin-left: -5.60px;
+}
+
+header > .header-wrapper > .header-slider .right-btn{
+    margin-right: 7.80px;
+}
+
+header > .header-wrapper > .refer-friend {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--test-gap);
+    cursor: pointer;
+}
+
+.refer-friend-text{
+    font-size: 18px;
+    font-family: var(--font-calibregular) !important;
+    font-weight: 400;
+    margin-top: -1px;
+}
+
+header > .header-wrapper > .refer-friend:hover {
+    opacity: var(--opacity-on-hover);
+}
+
+/* ============================================================================
+   NAVIGATION BAR
+   Main navigation with logo, menu items, and action icons
+   ============================================================================ */
+
+nav {
+    background-color: var(--white-color);
+    width: 100%;
+    height: 104px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--header-below-shadow);
+}
+
+nav > .nav-wrapper {
+    height: 56px;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 93.70% !important;
+}
+
+nav > .nav-wrapper .casper-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+nav > .nav-wrapper .nav-items-wrapper {
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: row;
+}
+
+nav > .nav-wrapper .nav-items-wrapper ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 34px; /*Later Use in media query for responsiveness on small screens or big*/
+    margin-top: -0.25px; /*Later Use in media query for responsiveness on small screens or big*/
+}
+
+nav > .nav-wrapper .nav-items-wrapper ul li a {
+    color: var(--primary-color);
+    font-family: var(--font-calibmedium);
+    font-size: 18px !important;
+    font-weight: 500;
+    letter-spacing: normal !important;
+}
+
+.nav-items-wrapper:not(:first-child){
+    
+}
+
+nav > .nav-wrapper .nav-items-wrapper ul li:nth-child(1){
+    /* margin-right: 4px; */
+}
+nav > .nav-wrapper .nav-items-wrapper ul li:nth-child(2){
+    /* margin-right: 4px; */
+    text-align: right;
+}
+
+nav > .nav-wrapper .nav-items-wrapper ul li a:hover {
+    opacity: var(--opacity-on-hover);
+}
+
+nav > .nav-wrapper .nav-items-wrapper ul li a.sales-text {
+    color: var(--sales-color);
+}
+
+nav > .nav-wrapper .nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3px;
+    gap: 20px /*Later Use in media query for responsiveness on small screens or big*/;
+}
+
+nav > .nav-wrapper .nav-icons a{
+    color: var(--primary-color);
+}
+
+nav > .nav-wrapper .nav-icons a:nth-child(2){
+    margin-bottom: 3px; /*Later Use in media query for responsiveness on small screens or big*/ 
+
+}
+
+/* ============================================================================
+   NAVIGATION BOTTOM BAR
+   Secondary navigation with product category icons
+   ============================================================================ */
+
+.nav-bottom {
+    width: 100%;
+    height: 68.4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--bottom-bar-shadow) !important;
+}
+
+.nav-bottom > .nav-wrapper {
+    height: 52.4px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 16px;
+    width: 93.70% !important;
+}
+
+.nav-bottom > .nav-wrapper a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px; /*Later Use in media query for responsiveness on small screens or big*/
+    color: var(--primary-color);
+    font-family: var(--font-calibmedium);
+    font-size: 12px;
+    padding: 0 8px 2px;
+}
+
+.nav-bottom > .nav-wrapper a .navbottom-img-wrapper {
+    width: 32px !important;
+    height: 32px !important;
+}
+
+.nav-bottom > .nav-wrapper a .navbottom-img-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-bottom > .nav-wrapper a .navbottom-text-wrapper {
+    display: flex;
+    /* margin-left: 2px; */
+}
+
+/* ============================================================================
+   HERO BANNER SECTION
+   Full-width gradient banner with promotional messaging
+   ============================================================================ */
+
+.banner-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 24px;
+}
+
+.banner-section h3:first-child {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.banner-section h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.banner-section h3:last-child {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* ============================================================================
+   PRODUCTS SECTION
+   Product grid layout with header and product cards
+   ============================================================================ */
+
+.products-section {
+    padding: 80px 0;
+}
+
+.product-section-header {
+    margin-bottom: 40px;
+}
+
+.product-section-header h2 {
+    font-size: 36px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.products-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.products-img-wrapper {
+    position: relative;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.products-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.products-img-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: var(--sales-color);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ============================================================================
+   MAIN CONTENT CONTAINER
+   Primary content wrapper
+   ============================================================================ */
+
+main {
+    width: 100%;
 }

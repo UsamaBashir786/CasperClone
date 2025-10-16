@@ -1,34 +1,59 @@
-:root{
-    /* Colors */
-    --primary-color: #1e306e;
-    --black-color:#000;
-    --sales-color:#cb372a;
-    --white-color:#FFFFFF;
-    
-    /* Opacity */
-    --opactiy-on-hover:0.7;
+/* ============================================================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   Global design tokens for consistent styling across the application
+   ============================================================================ */
 
-    /* Font Families */
-    --font-caliblight: "Caliblight", sans-serif;
-    --font-tertiary: "SuisseIntl", sans-serif;
+:root {
+    /* ────────────────────────────────────────────────────────────────────────
+       COLOR PALETTE
+       Brand colors and theme variables
+       ──────────────────────────────────────────────────────────────────── */
+    --primary-color: #1E306E;
+    --chat-box-color: #84B8E0;
+    --black-color: #000;
+    --sales-color: #CB372A;
+    --white-color: #FFFFFF;
+
+    /* ────────────────────────────────────────────────────────────────────────
+       INTERACTION STATES
+       Hover and active state properties
+       ──────────────────────────────────────────────────────────────────── */
+    --opacity-on-hover: 0.7;
+
+    /* ────────────────────────────────────────────────────────────────────────
+       TYPOGRAPHY
+       Font family definitions
+       ──────────────────────────────────────────────────────────────────── */
+    --font-caliblight: "CalibreWeb", sans-serif;
     --font-calibmedium: "Calibmedium", sans-serif;
     --font-calibregular: "Calibregular", sans-serif;
-    --font-newkansaslight: "NewKansasLight", sans-serif;
+    --font-newkansas: "NewKansas", sans-serif;
     --font-newkansasregular: "NewKansasRegular", sans-serif;
+    --font-tertiary: "SuisseIntl", sans-serif;
+    --font-chatbox: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Segoe UI", "Helvetica Neue", Helvetica, Cantarell, Ubuntu, Roboto, Noto, Arial, sans-serif;
 
-    /* Maximum Width */
-    --mobile-small-width:280px;
-    --max-mobile-width:335.2px;
-    --max-tablet-width:704px;
-    --max-laptop-width:928px;
-    --max-laptop-large-width:1344px;
-    --four-k-max-width:1600px;
+    /* ────────────────────────────────────────────────────────────────────────
+       RESPONSIVE BREAKPOINT WIDTHS
+       Maximum width constraints for different device sizes
+       ──────────────────────────────────────────────────────────────────── */
+    --mobile-small-width: 280px;
+    --max-mobile-width: 335.2px;
+    --max-mobile-large-width: 385.6px;
+    --max-tablet-width: 704px;
+    --max-laptop-width: 928px;
+    --max-laptop-large-width: 1344px;
+    --four-k-max-width: 1600px;
 
-
-
-    
-
-    /* Gaps */
-    /* Spacing */
-    /* Padding */
-}
+    /* ────────────────────────────────────────────────────────────────────────
+       SPACING & LAYOUT
+       Gap and spacing utilities
+       ──────────────────────────────────────────────────────────────────── */
+       --test-gap: 1rem;
+       --slider-gap:2rem;
+      /* ────────────────────────────────────────────────────────────────────────
+         Box SHADOW & LAYOUT
+         For Every Elements shadows 
+         ──────────────────────────────────────────────────────────────────── */
+      --header-below-shadow:0 0 10px #0000001b;
+      --bottom-bar-shadow:0 8px 15px #00000026;
+   }
