@@ -384,61 +384,6 @@ nav > .nav-wrapper .nav-icons a:nth-child(2) {
   letter-spacing: var(--mostly-em--letter-spacing);
   font-family: var(--font-calibmedium);
 }
-
-/* ============================================================================
-   PRODUCTS SECTION
-   Product grid layout with header and product cards
-   ============================================================================ */
-
-.products-section {
-  padding: 80px 0;
-}
-
-.product-section-header {
-  margin-bottom: 40px;
-}
-
-.product-section-header h2 {
-  font-size: 36px;
-  color: var(--primary-color);
-  font-weight: 600;
-}
-
-.products-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px;
-}
-
-.products-img-wrapper {
-  position: relative;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  overflow: hidden;
-  aspect-ratio: 4/3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.products-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.products-img-badge {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background-color: var(--sales-color);
-  color: white;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
 /* ============================================================================
    MAIN CONTENT CONTAINER
    Primary content wrapper
@@ -458,6 +403,7 @@ main {
   flex-direction: column;
   gap: 61.50px;
   justify-content: center;
+  padding-bottom: 64px;
 }
 
 .product-section {
@@ -482,6 +428,16 @@ main {
   align-items: flex-start;
   justify-content: flex-start;
   gap: var(--product-cards-gap);
+  flex-wrap: wrap;
+}
+
+/* Section two specific row gap */
+.section-two .product-cards-wrapper {
+  row-gap: 40px;
+}
+.section-three{
+  /* margin-top: -2.20px; */
+  margin-top: -1.20px;
 }
 
 .product-cards-wrapper > .product-card {
@@ -578,7 +534,84 @@ main {
     margin-top: -1px; /*Later Use in media query for responsiveness on small screens or big*/
     cursor: initial;
 }
-.product-card-addition-details-wrapper > span.product-off-badge > span{
+
+/* ============================================================================
+   SECTION-SPECIFIC LAYOUTS
+   ============================================================================ */
+
+/* Section One: 4 items per row */
+.section-one .product-cards-wrapper > .product-card {
+  flex: 0 0 calc((100% - (var(--product-cards-gap) * 3)) / 4);
+  max-width: calc((100% - (var(--product-cards-gap) * 3)) / 4);
 }
 
+/* Section Two: 4 items per row */
+.section-two .product-cards-wrapper > .product-card {
+  flex: 0 0 calc((100% - (var(--product-cards-gap) * 3)) / 4);
+  max-width: calc((100% - (var(--product-cards-gap) * 3)) / 4);
+}
 
+/* ============================================================================
+   COLOR SELECTION COMPONENT
+   ============================================================================ */
+
+.color-selection-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.color-option {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+}
+
+.color-option.selected {
+  border-color: var(--black-color);
+  box-shadow: 0 0 0 2px var(--white-color);
+}
+
+/* Color variants based on product images */
+.color-charcoal {
+  background-color: #3a3a3a;
+}
+
+.color-navy {
+  background-color: #2c4a5e;
+}
+
+.color-sand {
+  background-color: #c9b8a3;
+}
+
+.color-black {
+  background-color: #1a1a1a;
+}
+
+.color-cream {
+  background-color: #e8ddd0;
+}
+
+.color-white {
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+}
+
+.color-pink {
+  background-color: #d4b5a8;
+}
+
+.color-darkgray {
+  background-color: #4a4a4a;
+}
